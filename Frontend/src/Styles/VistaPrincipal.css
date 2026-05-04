@@ -1,0 +1,172 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+}
+.titulo{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.sobremi{
+    display: flex;
+    justify-content: center; 
+    gap: 2rem; 
+    margin: 2rem 0;
+}
+.bio{
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;     
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: box-shadow 0.3s;
+
+}
+.habilidades-seccion{
+    display: flex;
+    align-items: center;
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 600px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.titulo-habilidades{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.org-habilidades{
+    display: flex;
+    justify-content: center;
+}
+
+.medios_sociales{
+    background: #222; 
+    color: #ccc;     
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;     
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bio:hover, .habilidades-seccion:hover, .medios_sociales:hover {
+  box-shadow: 0 4px 16px rgba(246, 240, 240, 0.4);
+}
+
+.Foto-section{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.perfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.front {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.back {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.github-seccion{
+    display: flex;
+    align-items: center;
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    border-radius: 10px;
+    width: 30px;     
+    text-align: left;
+    gap: 1rem;
+}
+.linkedin-seccion-foto{
+    border-radius: 50%;
+}
+.linkedin-seccion{
+    display: flex;
+    align-items: center;
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    width: 30px;     
+    text-align: left;
+    gap: 1rem;
+}
+.gmail-seccion-foto{
+    border-radius: 50%;
+}
+.gmail-seccion{
+    display: flex;
+    align-items: center;
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    width: 30px;     
+    text-align: left;
+    gap: 1rem;
+    
+}
+.github-icon, .linkedin-icon, .gmail-icon{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.Proyectos{
+    display: flex;
+    justify-content: center; 
+    gap: 2rem; 
+    margin: 2rem 0;
+}
+.proyecto1{
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;     
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: box-shadow 0.3s;
+}
+.proyecto2{
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;     
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: box-shadow 0.3s;
+}
+.proyecto3{
+    background: #222; 
+    color: #ccc;      
+    padding: 2rem;
+    border-radius: 10px;
+    width: 300px;     
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: left;
+    transition: box-shadow 0.3s;
+}
