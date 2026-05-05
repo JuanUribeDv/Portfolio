@@ -72,9 +72,7 @@ function VistaPrincipal() {
                     <section>
                         <img src={Gmail} alt="Gmail2" className="gmail-icon"></img>
                     </section>
-                    <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer">
-                        <button className="btngmail">Ir al Gmail</button>
-                    </a>
+                    <p className="Gmail_texto">juanuribe079@gmail.com</p>
                 </section>
                 <section className="Cv-seccion">
                     <a href="/Juan_Pablo_Uribe_Cordoba_CV.pdf" download>

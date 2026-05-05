@@ -151,13 +151,19 @@
     transition: box-shadow 0.3s;
 }
 
-.btngit, .btnlink, .btngmail, .btncv{
+.btngit, .btnlink, .btncv{
     background-color: #204293;
     color: #fff;
     border-radius: 15px;
     padding: 0.5rem 1rem;
     cursor: pointer;
     
+
+    
 }
-/* Agregar una distribución de grid en la sección de medios sociales*/
+.Gmail_texto{
+    color: #ccc;
+    font-size: 1rem;
+}
+
 
