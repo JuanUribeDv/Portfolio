@@ -5,7 +5,7 @@
     padding: 2rem;
 
 }
-.titulo{
+.titulo, .titulo-principal, .titulo2{
     font-size: 1.5rem;
     color: #fff;
 }
@@ -14,6 +14,7 @@
     justify-content: center; 
     gap: 2rem; 
     margin: 2rem 0;
+    
 }
 .bio{
     background: #222; 
@@ -24,6 +25,7 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     text-align: left;
     transition: box-shadow 0.3s;
+    
 
 }
 .habilidades-seccion{
@@ -39,6 +41,7 @@
     transition: box-shadow 0.3s;
     justify-content: center;
     flex-direction: column;
+    
     
 }
 .titulo-habilidades{
@@ -59,7 +62,7 @@
     border-radius: 10px;
     width: 300px;     
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    text-align: left;
+    text-align: center;
     transition: box-shadow 0.3s;
     display: flex;
     flex-direction: column;
@@ -68,6 +71,7 @@
 
 .bio:hover, .habilidades-seccion:hover, .medios_sociales:hover {
   box-shadow: 0 4px 16px rgba(246, 240, 240, 0.4);
+  transform: translateY(-6px);
 }
 
 .Foto-section{
@@ -99,12 +103,10 @@
     padding: 2rem;
     border-radius: 10px;
     width: 30px;     
-    text-align: left;
+    text-align: center;
     gap: 1rem;
 }
-.linkedin-seccion-foto{
-    border-radius: 50%;
-}
+
 .linkedin-seccion{
     display: flex;
     align-items: center;
@@ -115,9 +117,7 @@
     text-align: left;
     gap: 1rem;
 }
-.gmail-seccion-foto{
-    border-radius: 50%;
-}
+
 .gmail-seccion{
     display: flex;
     align-items: center;
@@ -130,8 +130,8 @@
     
 }
 .github-icon, .linkedin-icon, .gmail-icon{
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
 }
 .Proyectos{
@@ -140,7 +140,7 @@
     gap: 2rem; 
     margin: 2rem 0;
 }
-.proyecto1{
+.proyecto1, .proyecto2, .proyecto3{
     background: #222; 
     color: #ccc;      
     padding: 2rem;
@@ -150,23 +150,14 @@
     text-align: left;
     transition: box-shadow 0.3s;
 }
-.proyecto2{
-    background: #222; 
-    color: #ccc;      
-    padding: 2rem;
-    border-radius: 10px;
-    width: 300px;     
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    text-align: left;
-    transition: box-shadow 0.3s;
+
+.btngit, .btnlink, .btngmail, .btncv{
+    background-color: #204293;
+    color: #fff;
+    border-radius: 15px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    
 }
-.proyecto3{
-    background: #222; 
-    color: #ccc;      
-    padding: 2rem;
-    border-radius: 10px;
-    width: 300px;     
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    text-align: left;
-    transition: box-shadow 0.3s;
-}
+/* Agregar una distribución de grid en la sección de medios sociales*/
+

@@ -1,17 +1,18 @@
-import {useState, useEffect} from "react"
 import '../Styles/VistaPrincipal.css'
 import Profile from "../Assets/Profile.png"
 import Github from "../Assets/Github.png"
 import Linkedin from "../Assets/Linkedin.png"
 import Gmail from "../Assets/Gmail.png"
+import { projects } from "../Data/Proyectos_info.js";
+import ProjectCard from '../Components/Proyectos_tarjeta';
+
+
 
 function VistaPrincipal() {
-
-    
     
   return (
     <div className="menu">
-        <h2>Bienvenido a mi Portfolio</h2>
+        <h2 className='titulo-principal'>Bienvenido a mi Portfolio</h2>
         <section className="Foto-section">
             <img src={Profile} alt="Perfil" className="perfil"></img>
         </section>
@@ -51,38 +52,42 @@ function VistaPrincipal() {
                 <header><h3>Medios Sociales</h3></header>
 
                 <section className="github-seccion">
-                    <section className="github-seccion-foto">
+                    <section >
                         <img src={Github} alt="GitHub" className="github-icon"></img>
                     </section>
-                    <button>Ir al Github</button>
+                    <a href="https://github.com/JuanUribeDv" target="_blank" rel="noopener noreferrer">
+                        <button className="btngit">Ir al Github</button>
+                    </a>
                 </section>
 
                 <section className="linkedin-seccion">
-                    <section className="linkedin-seccion-foto">
+                    <section>
                         <img src={Linkedin} alt="LinkedIn" className="linkedin-icon"></img>
                     </section>
-                    <button>Ir al Linkedin</button>
+                    <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                        <button className="btnlink">Ir al Linkedin</button>
+                    </a>
                 </section>
                 <section className="gmail-seccion">
-                    <section className="gmail-seccion-foto">
-                        <img src={Gmail} alt="Gmail" className="gmail-icon"></img>
+                    <section>
+                        <img src={Gmail} alt="Gmail2" className="gmail-icon"></img>
                     </section>
-                    <button>Ir al Gmail</button>
+                    <a href="https://mail.google.com" target="_blank" rel="noopener noreferrer">
+                        <button className="btngmail">Ir al Gmail</button>
+                    </a>
+                </section>
+                <section className="Cv-seccion">
+                    <a href="/Juan_Pablo_Uribe_Cordoba_CV.pdf" download>
+                        <button className="btncv">Descargar mi CV</button>
+                    </a>
                 </section>
             </section>
         </div>
-        <header><h3>Proyectos</h3></header>
+        <p className='titulo2'>Proyectos</p>
         <div className="Proyectos">
-            
-            <section className="proyecto1">
-                <header><h4>Proyecto 1:Personal-Finances-Tracker</h4></header>
-            </section>
-            <section className="proyecto2">
-                <header><h4>Proyecto 2:Goal-Handler</h4></header>
-            </section>
-            <section className="proyecto3">
-                <header><h4>Proyecto 3:Proyect-cotizations</h4></header>
-            </section>
+            {projects.map((project) => (
+                <ProjectCard key={project.id} {...project} />
+            ))}
         </div>
       
       
@@ -91,3 +96,4 @@ function VistaPrincipal() {
   );
 }
 export default VistaPrincipal;
+                   
