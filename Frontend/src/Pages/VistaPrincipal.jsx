@@ -16,7 +16,7 @@ function VistaPrincipal() {
         <section className="Foto-section">
             <img src={Profile} alt="Perfil" className="perfil"></img>
         </section>
-        
+        <p>hola</p>
         <p className="titulo">Sobre mi</p>
         <div className="sobremi">
         
