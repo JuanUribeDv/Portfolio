@@ -1,0 +1,176 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(14px);
+  background: rgba(11, 15, 23, 0.72);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  height: var(--nav-height);
+}
+
+.navbar__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--heading);
+}
+
+.navbar__brand-mark {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--gradient-accent);
+  color: #04121f;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.navbar__brand-text {
+  font-size: 1.05rem;
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.navbar__links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition);
+  position: relative;
+}
+
+.navbar__links a:hover {
+  color: var(--heading);
+}
+
+.navbar__links li:not(.navbar__cta) a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--gradient-accent);
+  transition: width var(--transition);
+}
+
+.navbar__links li:not(.navbar__cta) a:hover::after {
+  width: 100%;
+}
+
+.navbar__links .btn {
+  font-size: 0.9rem;
+  padding: 0.55rem 1.1rem;
+}
+
+/* Botón hamburguesa */
+.navbar__toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: rgba(148, 163, 184, 0.06);
+  position: relative;
+}
+
+.navbar__toggle-icon,
+.navbar__toggle-icon::before,
+.navbar__toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--heading);
+  transform: translateX(-50%);
+  transition: transform var(--transition), opacity var(--transition);
+}
+
+.navbar__toggle-icon {
+  top: 50%;
+  margin-top: -1px;
+}
+
+.navbar__toggle-icon::before {
+  top: -6px;
+}
+
+.navbar__toggle-icon::after {
+  top: 6px;
+}
+
+.navbar__toggle-icon.is-open {
+  background: transparent;
+}
+
+.navbar__toggle-icon.is-open::before {
+  transform: translateX(-50%) translateY(6px) rotate(45deg);
+}
+
+.navbar__toggle-icon.is-open::after {
+  transform: translateX(-50%) translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 860px) {
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.25rem;
+    padding: 1rem 1.5rem 1.5rem;
+    background: rgba(11, 15, 23, 0.97);
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition), transform var(--transition);
+  }
+
+  .navbar__links.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .navbar__links a {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .navbar__links li:not(.navbar__cta) a::after {
+    display: none;
+  }
+
+  .navbar__cta {
+    margin-top: 0.5rem;
+  }
+
+  .navbar__links .btn {
+    width: 100%;
+  }
+}
