@@ -1,5 +1,5 @@
 import proyecto1 from "../Assets/personal_finances_tracker_muestra.png";
-import proyecto2 from "../Assets/Goal_handler_muestra.png";
+import proyecto2 from "../Assets/goal_handler_muestra.png";
 import proyecto3 from "../Assets/Negocio_muestra.png";
 import proyecto4 from "../Assets/Sig_muestra.png";
 import proyecto5 from "../Assets/Arq_microservicios_muestra.png";
