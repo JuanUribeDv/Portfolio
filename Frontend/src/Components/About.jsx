@@ -6,13 +6,11 @@ function About() {
       <div className="container">
         <div className="section-head">
           <p className="eyebrow">Sobre mí</p>
-          <h2 className="section-title">¿Quién soy?</h2>
         </div>
-
         <div className="about__grid">
           <div className="card about__bio">
             <p>
-              Hola, soy Juan Pablo Uribe, estudiante de la Institución
+              Estudiante de la Institución
               Universitaria de Sabaneta «Unisabaneta». Soy un desarrollador web
               junior con pasión por crear experiencias digitales atractivas y
               funcionales.

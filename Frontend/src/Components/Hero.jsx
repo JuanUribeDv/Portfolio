@@ -11,7 +11,7 @@ function Hero() {
             Hola, soy <span className="hero__name">Juan Pablo Uribe</span>
           </h1>
           <p className="hero__lead">
-            Desarrollador web junior apasionado por crear experiencias digitales
+            Desarrollador web apasionado por crear experiencias digitales
             atractivas, intuitivas y responsivas con HTML, CSS, JavaScript y React.
           </p>
 
@@ -20,7 +20,7 @@ function Hero() {
               Ver proyectos
             </a>
             <a
-              href="/Juan_Pablo_Uribe_Cordoba_CV.pdf"
+              href="/Hoja_de_vida_JuanUribe.docx.pdf"
               download
               className="btn btn-ghost"
             >
