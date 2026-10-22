@@ -15,8 +15,26 @@ export const LANGUAGE_COLORS = {
   Swift: "#F05138",
   Kotlin: "#A97BFF",
   Dart: "#00B4AB",
+  "Node.js": "#339933",
+  "Express.js": "#eeeeee",
+  MySQL: "#4479A1",
+  PostgreSQL: "#4169E1",
+  React: "#61DAFB",
+  Firebase: "#cd8733",
+  "Tailwind CSS": "#38BDF8",
+  Zustand: "#F4A460",
+  Recharts: "#22B5BF",
+  Vite: "#646CFF",
+  Supabase: "#7d58e4",
+  Leaflet: "#199900",
+  MapLibre: "#396CB2",
+  Axios: "#5A29E4",
+  "React Router": "#CA4245",
+  "React Router DOM": "#CA4245",
   HTML: "#e34c26",
+  HTML5: "#e34c26",
   CSS: "#563d7c",
+  CSS3: "#af553c",
   SCSS: "#c6538c",
   Shell: "#89e051",
   Bash: "#4EAA25",
@@ -33,4 +51,17 @@ export const LANGUAGE_COLORS = {
   Nix: "#7e7eff",
   Dockerfile: "#384d54",
   Makefile: "#427819",
+}
+
+const normalizeTagName = (name) => name.toLowerCase().replace(/[\s._-]/g, "")
+
+const normalizedColors = Object.fromEntries(
+  Object.entries(LANGUAGE_COLORS).map(([name, color]) => [
+    normalizeTagName(name),
+    color,
+  ])
+)
+
+export function getTagColor(name) {
+  return normalizedColors[normalizeTagName(name)] ?? DEFAULT_TAG_COLOR
 }

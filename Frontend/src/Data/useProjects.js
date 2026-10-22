@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react"
 import { curatedProjects } from "./Proyectos_info.js"
-import { LANGUAGE_COLORS, DEFAULT_TAG_COLOR } from "./languageColors.js"
+import { getTagColor } from "./languageColors.js"
 
 const GITHUB_USER = "JuanUribeDv"
 const API_URL = `https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=pushed&direction=desc`
 const EXCLUDED_REPOS = ["Portfolio", "JuanUribeDv"]
-const MAX_TOPIC_TAGS = 2
+const MAX_TOPIC_TAGS = 5
 
 const localImages = Object.fromEntries(
   Object.entries(
@@ -36,14 +36,14 @@ function mapRepo(repo) {
   if (repo.language) {
     tags.push({
       label: repo.language,
-      color: LANGUAGE_COLORS[repo.language] ?? DEFAULT_TAG_COLOR,
+      color: getTagColor(repo.language),
     })
   }
   topics
     .filter((topic) => topic !== "portfolio" && topic !== "featured")
     .slice(0, MAX_TOPIC_TAGS)
     .forEach((topic) => {
-      tags.push({ label: topic, color: DEFAULT_TAG_COLOR })
+      tags.push({ label: topic, color: getTagColor(topic) })
     })
 
   const demoUrl =
@@ -93,7 +93,12 @@ function buildCuratedProject(item, apiRepo) {
     }
   }
 
-  return { ...base, ...overrides }
+  const tags = [...base.tags, ...(overrides.tags ?? [])].filter(
+    (tag, index, allTags) =>
+      allTags.findIndex((candidate) => candidate.label === tag.label) === index
+  )
+
+  return { ...base, ...overrides, tags }
 }
 
 export function useProjects() {

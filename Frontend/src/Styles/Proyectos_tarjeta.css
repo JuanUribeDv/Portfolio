@@ -1,8 +1,12 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, var(--surface) 0%, var(--surface-2) 100%);
-  border: 1px solid var(--border);
+  background: linear-gradient(
+    155deg,
+    color-mix(in srgb, var(--project-color) 18%, var(--surface)) 0%,
+    var(--surface-2) 82%
+  );
+  border: 1px solid color-mix(in srgb, var(--project-color) 34%, var(--border));
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
@@ -12,7 +16,7 @@
 
 .project-card:hover {
   transform: translateY(-6px);
-  border-color: var(--accent-border);
+  border-color: color-mix(in srgb, var(--project-color) 65%, var(--border));
   box-shadow: var(--shadow);
 }
 

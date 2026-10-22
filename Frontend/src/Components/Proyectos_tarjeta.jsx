@@ -6,7 +6,10 @@ const ProjectCard = ({ title, image, tags, description, codeUrl, demoUrl, featur
   const imageDialogRef = useRef(null)
 
   return (
-    <article className="project-card">
+    <article
+      className="project-card"
+      style={{ '--project-color': tags[0]?.color ?? '#a79e98' }}
+    >
       <div className="card-image-wrapper">
         <img
           src={image}
