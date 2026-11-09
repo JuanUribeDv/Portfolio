@@ -10,7 +10,7 @@ function About() {
         <div className="about__grid">
           <div className="card about__bio">
             <p>
-              Estudiante de la Institución
+              Estudiante de la Corporación
               Universitaria de Sabaneta «Unisabaneta». Soy un desarrollador web
               junior con pasión por crear experiencias digitales atractivas y
               funcionales.
@@ -21,8 +21,7 @@ function About() {
               interfaces de usuario intuitivas y responsivas.
             </p>
             <p>
-              Mi objetivo es seguir aprendiendo y creciendo en el campo del
-              desarrollo web, contribuyendo a proyectos innovadores y
+              Mi objetivo es generar valor y desarrollarme profesionalemte en el campo de la programación, contribuyendo a proyectos innovadores y
               desafiantes.
             </p>
           </div>
@@ -43,7 +42,7 @@ function About() {
             <div className="fact">
               <span className="fact__label">Estado</span>
               <span className="fact__value fact__value--available">
-                <span className="fact__dot" /> Disponible para aprender
+                <span className="fact__dot" /> Disponible para práctica empresarial para el periodo 2027-01
               </span>
             </div>
           </aside>

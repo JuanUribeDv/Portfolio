@@ -14,7 +14,7 @@ function Footer() {
           <a href="https://github.com/JuanUribeDv" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/juan-pablo-uribe-córdoba-05a45744a" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
           <a href="mailto:juanuribe079@gmail.com">Email</a>

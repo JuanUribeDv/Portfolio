@@ -4,12 +4,12 @@ const groups = [
   {
     title: 'Frontend',
     icon: <Palette />,
-    skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+    skills: ['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript' ],
   },
   {
     title: 'Backend',
     icon: <Settings />,
-    skills: ['Node.js', 'Express'],
+    skills: ['Node.js', 'Express', 'MongoDB', 'MySQL', 'PostgreSQL', 'Supabase', 'Firebase'],
   },
   {
     title: 'Herramientas',
